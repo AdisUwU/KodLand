@@ -64,4 +64,4 @@ async def ecomem(ctx):
 # Możemy następnie wysłać ten plik jako parametr!
     await ctx.send(file=picture)
     
-bot.run("MTE5OTQwMDAzMjU1NDcxNzI0NA.GxQ6XR.ybXP7Bd3z9MtKiB9dOtpq2tEfS7Wh0HKkngcNs")
+bot.run("")
