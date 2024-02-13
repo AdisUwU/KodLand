@@ -54,4 +54,14 @@ rady = ['Oszczędzaj wodę poprzez naprawę przecieków i używanie pryszniców 
 async def ecorada(ctx):
     await ctx.send(random.choice(rady))
     
-bot.run("")
+@bot.command()
+async def ecomem(ctx):
+    ecoimages = os.listdir('ecoimages')
+    ecoimage = random.choice(ecoimages)
+    with open(f'ecoimages/{ecoimage}', 'rb') as f:
+        # Zapiszmy przekonwertowany plik biblioteki Discord w tej zmiennej!
+        picture = discord.File(f)
+# Możemy następnie wysłać ten plik jako parametr!
+    await ctx.send(file=picture)
+    
+bot.run("MTE5OTQwMDAzMjU1NDcxNzI0NA.GxQ6XR.ybXP7Bd3z9MtKiB9dOtpq2tEfS7Wh0HKkngcNs")
